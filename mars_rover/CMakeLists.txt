@@ -46,6 +46,7 @@ install(PROGRAMS
   nodes/move_wheel
   nodes/run_demo
   nodes/odom_tf_publisher
+  nodes/RACS2Bridge_geometry_msgs_pb2.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
