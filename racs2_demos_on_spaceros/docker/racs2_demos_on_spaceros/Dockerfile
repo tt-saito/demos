@@ -73,7 +73,7 @@ WORKDIR ${DEMO_DIR}/src
 RUN mv demos demos_old
 RUN touch demos_old/COLCON_IGNORE
 # git clone new demo
-RUN git clone https://github.com/tt-saito/demos.git -b racs2_demo
+RUN git clone https://github.com/tt-saito/demos.git -b racs2_demo2
 
 # Customize cFS to run the bridge
 WORKDIR ${RACS2_DEMO_DIR}/cfs
@@ -82,8 +82,8 @@ RUN cp -r cfe/cmake/sample_defs sample_defs
 RUN cp -pr ${RACS2_DEMO_DIR}/racs2_bridge/cFS/Bridge/Client_C/apps/racs2_bridge_client apps/
 
 # Deploy the run_app application and adjust the startup scripts
-RUN cp -pr ${DEMO_DIR}/src/demos/mars_rover/cFS/sample_defs/* ${RACS2_DEMO_DIR}/cfs/sample_defs/
-RUN cp -pr ${DEMO_DIR}/src/demos/mars_rover/cFS/apps/run_app ${RACS2_DEMO_DIR}/cfs/apps/
+RUN cp -pr ${DEMO_DIR}/src/demos/racs2_demos_on_spaceros/cFS/sample_defs/* ${RACS2_DEMO_DIR}/cfs/sample_defs/
+RUN cp -pr ${DEMO_DIR}/src/demos/racs2_demos_on_spaceros/cFS/apps/run_app ${RACS2_DEMO_DIR}/cfs/apps/
 
 # This is necessary to run cFS inside docker
 RUN sed -i -e 's/^#undef OSAL_DEBUG_PERMISSIVE_MODE/#define OSAL_DEBUG_PERMISSIVE_MODE 1/g' sample_defs/default_osconfig.h

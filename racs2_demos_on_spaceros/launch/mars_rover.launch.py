@@ -54,11 +54,11 @@ def generate_launch_description():
         output='screen'
     )
 
-    run_node = Node(
-        package="mars_rover",
-        executable="run_demo",
-        output='screen'
-    )
+    # run_node = Node(
+    #     package="mars_rover",
+    #     executable="run_demo",
+    #     output='screen'
+    # )
 
     odom_node = Node(
         package="mars_rover",
