@@ -136,7 +136,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
 
 # Build MoveIt2
 RUN /bin/bash -c 'source ${SPACEROS_DIR}/install/setup.bash \
-  && colcon build --parallel-workers 1 --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --event-handlers desktop_notification- status-'
+  && colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --event-handlers desktop_notification- status-'
 
 # Add a couple sample GUI apps for testing
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
