@@ -20,7 +20,7 @@ import xacro
 
 def generate_launch_description():
 
-    mars_rover_demos_path = get_package_share_directory('mars_rover')
+    mars_rover_demos_path = get_package_share_directory('racs2_demos_on_spaceros')
     mars_rover_models_path = get_package_share_directory('simulation')
 
     env = {'IGN_GAZEBO_SYSTEM_PLUGIN_PATH':
@@ -37,19 +37,19 @@ def generate_launch_description():
     robot_description = {'robot_description': doc.toxml()}
 
     arm_node = Node(
-        package="mars_rover",
+        package="racs2_demos_on_spaceros",
         executable="move_arm",
         output='screen'
     )
 
     mast_node = Node(
-        package="mars_rover",
+        package="racs2_demos_on_spaceros",
         executable="move_mast",
         output='screen'
     )
 
     wheel_node = Node(
-        package="mars_rover",
+        package="racs2_demos_on_spaceros",
         executable="move_wheel",
         output='screen'
     )
@@ -61,7 +61,7 @@ def generate_launch_description():
     # )
 
     odom_node = Node(
-        package="mars_rover",
+        package="racs2_demos_on_spaceros",
         executable="odom_tf_publisher",
         output='screen'
     )

@@ -41,7 +41,7 @@ Depending on the host computer, you might need to remove the ```--gpus all``` fl
 ### Curiosity Mars rover demo
 Launch the rover demo:
 ```bash
-ros2 launch mars_rover mars_rover.launch.py
+ros2 launch racs2_demos_on_spaceros mars_rover.launch.py
 ```
 
 #### RACS2 Bridge demo

@@ -109,7 +109,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
   sudo apt-get update -y \
 && /bin/bash -c 'source "${SPACEROS_DIR}/install/setup.bash"' \
 && /bin/bash -c 'source "${MOVEIT2_DIR}/install/setup.bash"' \
-&& rosdep install --from-paths src --ignore-src -r -y --rosdistro ${ROSDISTRO}
+&& rosdep install --from-paths src --ignore-src -r -y --rosdistro ${ROS_DISTRO}
 
 # Build the demo
 RUN /bin/bash -c 'source ${SPACEROS_DIR}/install/setup.bash && source ${MOVEIT2_DIR}/install/setup.bash \
