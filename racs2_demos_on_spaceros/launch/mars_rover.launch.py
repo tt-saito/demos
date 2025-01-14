@@ -54,11 +54,11 @@ def generate_launch_description():
         output='screen'
     )
 
-    # run_node = Node(
-    #     package="mars_rover",
-    #     executable="run_demo",
-    #     output='screen'
-    # )
+    run_node = Node(
+        package="racs2_demos_on_spaceros",
+        executable="run_demo",
+        output='screen'
+    )
 
     odom_node = Node(
         package="racs2_demos_on_spaceros",
@@ -164,7 +164,7 @@ def generate_launch_description():
         arm_node,
         mast_node,
         wheel_node,
-        run_node,
+        # run_node,
         odom_node,
         ros_gz_bridge,
         image_bridge,
